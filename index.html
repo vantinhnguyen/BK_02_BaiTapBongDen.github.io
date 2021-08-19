@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .nha{
+            height: 800px;
+            width: 800px;
+            background-color: beige;
+            border: 1px solid #000;
+        }
+        .day_dien{
+            height: 100px;
+            width: 0;
+            border: 1px solid #000;
+            margin: 0 auto;
+        }
+        .bong_den{
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            border-radius: 100px;
+            position: relative;
+        }
+
+        .bong_den p{
+            font-size: 25px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .cong_tac{
+            display: block;
+            font-size: 25px;
+            color: #fff;
+            line-height: 60px;
+            text-align: center;
+            width: 200px;
+            height: 60px;
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-top: 200px;
+            background-color: rgb(123, 76, 235);
+        }
+
+        .cong_tac:hover, .cong_tac a:hover{
+            cursor: pointer;
+            opacity: 0.9;
+        }
+
+        .cong_tac:active{
+            transform: scale(0.9);
+        }
+    </style>
+    
+  
+    <script>
+        var kt=1;
+        var cong_tac = document.getElementById('cong_tac')
+        
+    </script>
+
+</head>
+<body>
+
+    <div class="nha">
+        <div class="day_dien"></div>
+        <div class="bong_den"><p>Bóng đèn</p></div>
+        <button class="cong_tac" id="cong_tac">Nhấn để bật đèn</button>
+    </div>
+</body>
+</html>
