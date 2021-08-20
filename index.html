@@ -39,14 +39,14 @@
         }
 
         .bong_den p{
-            font-size: 25px;
+            font-size: 20px;
             text-align: center;
             line-height: 200px;
         }
 
         .cong_tac{
             display: block;
-            font-size: 25px;
+            font-size: 20px;
             color: #fff;
             line-height: 60px;
             text-align: center;
@@ -70,9 +70,22 @@
     
   
     <script>
-        var kt=1;
-        var cong_tac = document.getElementById('cong_tac')
-        
+        var kt=-1;
+
+        function bat_tat_den(){
+            if(kt==-1){
+                document.getElementById('bong_den').style.backgroundColor = 'yellow';
+                document.getElementById('cong_tac').textContent = 'Nhấn để tắt đèn';
+                document.getElementById('nd').textContent = 'Bóng đèn đang bật';
+                kt *= -1;
+            }else{
+                document.getElementById('bong_den').style.backgroundColor = '#fff';
+                document.getElementById('cong_tac').textContent = 'Nhấn để bật đèn';
+                document.getElementById('nd').textContent = 'Bóng đèn đang tắt';
+                kt *= -1;
+            }
+
+        }
     </script>
 
 </head>
@@ -80,8 +93,8 @@
 
     <div class="nha">
         <div class="day_dien"></div>
-        <div class="bong_den"><p>Bóng đèn</p></div>
-        <button class="cong_tac" id="cong_tac">Nhấn để bật đèn</button>
+        <div class="bong_den" id="bong_den" ><p id="nd">Bóng đèn đang tắt</p></div>
+        <button class="cong_tac" id="cong_tac" onclick="bat_tat_den()">Nhấn để bật đèn</button>
     </div>
 </body>
 </html>
